@@ -1,5 +1,5 @@
 {
-    "name": "bravotest",
+    "name": "mayadesign",
     "version": "1.0.0",
     "description": "",
     "dependencies": {
@@ -14,12 +14,12 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/realgt/bravotest.git"
+        "url": "git+https://github.com/realgt/mayadesign.git"
     },
     "author": "",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/realgt/bravotest/issues"
+        "url": "https://github.com/realgt/mayadesign/issues"
     },
-    "homepage": "https://github.com/realgt/bravotest#readme"
+    "homepage": "https://github.com/realgt/mayadesign#readme"
 }
