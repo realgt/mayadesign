@@ -1,0 +1,25 @@
+{
+    "name": "bravotest",
+    "version": "1.0.0",
+    "description": "",
+    "dependencies": {
+        "dotenv": "^8.2.0",
+        "node-fetch": "^2.6.1",
+        "querystring": "^0.2.0"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "debug": "netlify dev --inspect"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/realgt/bravotest.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/realgt/bravotest/issues"
+    },
+    "homepage": "https://github.com/realgt/bravotest#readme"
+}

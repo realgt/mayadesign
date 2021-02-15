@@ -1,0 +1,17 @@
+[build]
+  functions = "./functions"
+  publish = "."
+
+
+[[redirects]]
+  from = "/api/data"
+  to = "/.netlify/functions/github"
+  status = 200
+  force = true
+
+
+[[redirects]]
+  from = "/api/files"
+  to = "/.netlify/functions/files"
+  status = 200
+  force = true
