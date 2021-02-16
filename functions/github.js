@@ -47,7 +47,6 @@ exports.handler = async(event, context) => {
                     })
                     .then(response => response.json())
                     .then(json => {
-                        console.log(json);
                         return {
                             statusCode: 200,
                             body: `${filename}`
