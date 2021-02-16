@@ -12,7 +12,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <script>
-        netlifyIdentity.on('login', user => window.location.href = "/admin/");
+        netlifyIdentity.on('login', user => {
+            netlifyIdentity.refresh().then((jwt) => window.location.href = "/admin/");
+        });
     </script>
     <style>
         [data-netlify-identity-button] a {

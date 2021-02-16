@@ -15,3 +15,15 @@
   to = "/.netlify/functions/files"
   status = 200
   force = true
+
+[[redirects]]
+  from = "/login"
+  to = "/login.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/logout"
+  to = "/logout.html"
+  status = 200
+  force = true
