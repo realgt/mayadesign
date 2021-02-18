@@ -1,7 +1,7 @@
 const fetch = require("node-fetch");
 exports.handler = async(event, context) => {
     data = [];
-    // Only allow POST
+    // Only allow GET
     if (event.httpMethod !== "GET") {
         return { statusCode: 405, body: "Method Not Allowed" };
     }
@@ -17,26 +17,30 @@ exports.handler = async(event, context) => {
             })
             .then(response => response.json())
             .then(json => {
-                json.forEach(item => {
-                    if (item["type"] == "file") {
-                        file = item["name"];
-                        if (file.indexOf(".html") >= 0) {
-                            let blockedPages = ["login.html"];
-                            if (blockedPages.indexOf(file) == -1) {
-                                data.push({
-                                    name: file.split(".")[0],
-                                    title: file == "index.html" ? "Home" : file,
-                                    url: "../" + file,
-                                    file: file,
-                                    folder: "/",
-                                    assets: []
-                                });
+                if (json) {
+                    console.info(json);
+                    json.forEach(item => {
+                        if (item["type"] == "file") {
+                            file = item["name"];
+                            if (file.indexOf(".html") >= 0) {
+                                let blockedPages = ["login.html", "logout.html"];
+                                if (blockedPages.indexOf(file) == -1) {
+                                    data.push({
+                                        name: file.split(".")[0],
+                                        title: file == "index.html" ? "Home" : file,
+                                        url: "../" + file,
+                                        file: file,
+                                        folder: "/",
+                                        assets: []
+                                    });
+                                }
+
                             }
 
                         }
+                    });
+                }
 
-                    }
-                });
             });
 
     } catch (err) {
